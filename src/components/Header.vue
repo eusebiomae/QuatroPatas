@@ -150,7 +150,7 @@ a {
     position: static;
     height: 60px;
     width: auto;
-    background-color: #dfc882;
+    background-color: #e6cf89;
     flex-direction: none;
   }
 

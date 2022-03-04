@@ -12,7 +12,7 @@ const router = createRouter({
     },
     {
       path: '/rules',
-      name: 'rules',
+      name: '/rules',
       component: RulesView
     },
   ]

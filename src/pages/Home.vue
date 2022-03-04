@@ -12,7 +12,7 @@
 
       <div id="text-subhome">
         <p>
-          A Quatro Patas pode ajudar nessa missão! <br />
+          A <b>Quatro Patas</b> pode ajudar nessa missão! <br />
           Doguinhos e Gatinhos estão esperando para fazer você feliz! <br />
           Adote agora mesmo!
         </p>
@@ -54,10 +54,46 @@ export default {
 </script>
 
 <style scoped>
+#row {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#text-left {
+  margin-top: 20vh;
+}
+
+#text-home {
+  font-family: "Amatic Sc";
+  font-size: 7vh;
+  text-align: center;
+}
+
+#text-subhome {
+  text-align: center;
+  font-size: initial;
+}
+
+#btn-adote {
+  width: auto;
+  margin-top: 25px;
+}
+#btn-regras {
+  width: auto;
+  margin-top: 25px;
+}
+
+#img-home {
+  margin-top: 10vh;
+  margin-bottom: 25vh;
+}
+
 #logo-home {
   max-width: 45vh;
 }
-@media (min-width: 576px) {
+
+@media (min-width: 700px) {
   #row {
     width: 100%;
     height: 100%;
@@ -98,8 +134,8 @@ export default {
   }
 
   #logo-home {
-    max-width: 75vh;
-    margin-left: 14vh;
+    max-width: 95vh;
+    margin-left: 17vh;
   }
 }
 </style>

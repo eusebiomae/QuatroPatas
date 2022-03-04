@@ -24,13 +24,22 @@ export default {
 
 
 <style>
-@import "@/styles/global.css";
+@import "@/assets/base.css";
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 #app {
   width: fit-content;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   font-weight: normal;
+}
+
+@media (min-width: 700px) {
+  #app {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+  }
 }
 </style>

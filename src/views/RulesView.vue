@@ -1,34 +1,33 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import Header from '@/components/Header.vue';
-</script>
-
 <template>
-  <Header />
-  <RouterView />
-
-  <div class="rules">
-    <h1>Regras</h1>
-    <!-- <p class="text-rules">Esta é a pagina de regras para adoção dos nossos pets. 
-      Nossos bixinhos já estão vacinados, saudáveis e limpos, prontinhos para ser a alegria do seu lar!</p> -->
+  <div id="rules">
+    <Header />
+    pinga
+    <Footer />
   </div>
-  
 </template>
 
+<script lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+
+export default {
+  name: "RulesView",
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+
 <style>
-@import '@/assets/base.css';
+@import "@/assets/base.css";
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
-@media (min-width: 1024px) {
-  .rules {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media (min-width: 375px) {
-    .text-rules {
-    text-align: justify;
-  }
+#rules {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
 }
 </style>
