@@ -133,6 +133,12 @@ a {
 /* <!---------- Media Query ---------------> */
 
 @media (min-width: 700px) {
+  #logo {
+    width: 130px;
+    margin: 1vh;
+    margin-inline: 19vh;
+  }
+
   #menu-button,
   #menu-logo,
   #menu-overlay {

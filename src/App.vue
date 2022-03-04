@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Home />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   components: {
     Header,
     Home,
-    // Footer,
+    Footer,
   },
 };
 </script>
@@ -28,11 +28,9 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 #app {
-  width: auto;
+  width: fit-content;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
-  display: -webkit-box;
-  margin: 10vh;
 }
 </style>
