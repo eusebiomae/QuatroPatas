@@ -1,20 +1,21 @@
 <template>
   <footer class="footer">
-    <img
-      alt="Vue logo"
-      class="logo-footer"
-      id="logo-footer"
-      src="@/assets/images/LogoQuatroPatas.svg"
-    />
+    <router-link to="/"
+      ><img
+        alt="Vue logo"
+        class="logo-footer"
+        id="logo-footer"
+        src="@/assets/images/LogoQuatroPatas.svg"
+    /></router-link>
     <div id="text-footer">
       <p><b>Quatro Patas Adoção de Animais</b></p>
       <p>
         <a
           href="http://maps.google.com/maps?q=158+R.+das+Oliveiras,+Iguatemi,+São+Paulo"
-          class="about-link"
+          id="address-link"
           target="blank"
-          >Rua das Oliveiras, 158 | Nova Floresta - São Paulo, SP 13999-008</a
-        >
+          >Rua das Oliveiras, 158 | Nova Floresta - São Paulo, SP 13999-008
+        </a>
       </p>
       <p>
         <a href="tel:+021-9921-8282" class="" id="phone-link-q"
@@ -110,6 +111,14 @@ ul li {
 }
 #phone-link-q:hover {
   color: #8e41dc;
+}
+
+#address-link {
+  text-decoration: none;
+  color: #000;
+}
+#address-link:hover {
+  color: #9b5cda;
 }
 
 /* <!------------ Media Query ------------------> */

@@ -1,12 +1,12 @@
 <template>
   <header class="container">
-    <a href="/" class="">
+    <router-link to="/">
       <img
         alt="Vue logo"
         class="logo"
         id="logo"
         src="@/assets/images/LogoQuatroPatas.svg"
-    /></a>
+    /></router-link>
 
     <img
       v-on:click="openMenu"
@@ -25,7 +25,9 @@
         src="@/assets/images/LogoQuatroPatas.svg"
       />
       <ul>
-        <li><a href="/rules" class="">Nossas Regras</a></li>
+        <li>
+          <router-link to="/rules" id="rules-link">Nossas Regras</router-link>
+        </li>
       </ul>
     </div>
   </header>
@@ -90,6 +92,10 @@ header {
   opacity: 0.6;
 }
 
+#rules-link {
+  text-decoration: none;
+}
+
 #menu-logo {
   width: 110px;
   margin-top: 3vh;
@@ -143,6 +149,10 @@ a {
   #menu-logo,
   #menu-overlay {
     display: none;
+  }
+
+  #rules-link {
+    text-decoration: none;
   }
 
   #menu-items {

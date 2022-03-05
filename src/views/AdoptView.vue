@@ -1,38 +1,13 @@
 <template>
-  <div class="row" id="row">
+  <div class="row" id="adopt">
     <div class="col-lg-6 order-lg-last" id="text-left">
       <div class="">
         <h1 id="text-home">
-          <b
-            >Procurando um novo <br />
-            amigo?</b
-          >
+          <b>Adote Agora!</b>
         </h1>
       </div>
-
       <div id="text-subhome">
-        <p>
-          A <b>Quatro Patas</b> pode ajudar nessa missão! <br />
-          Doguinhos e Gatinhos estão esperando para fazer você feliz! <br />
-          Adote agora mesmo!
-        </p>
-      </div>
-
-      <div id="button-home">
-        <a href="/" class=""
-          ><img
-            id="btn-adote"
-            src="@/assets/images/Adote.png"
-            alt="Home Btn"
-            class="btn"
-        /></a>
-        <a href="/rules" class=""
-          ><img
-            id="btn-regras"
-            src="@/assets/images/NossasRegras.png"
-            alt="Home Btn Regras"
-            class="btn"
-        /></a>
+        <p>Temos vários peludinhos esperando para fazer um lar mais feliz!</p>
       </div>
     </div>
 
@@ -41,7 +16,7 @@
         alt="Vue logo"
         class="logo-home"
         id="logo-home"
-        src="@/assets/images/HomeDog2x.png"
+        src="@/assets/images/AdoptDog2x.png"
       />
     </div>
   </div>
@@ -49,12 +24,12 @@
 
 <script lang="ts">
 export default {
-  name: "Home",
+  name: "Rules",
 };
 </script>
 
 <style scoped>
-#row {
+#rules {
   width: 100%;
   height: 100%;
   display: block;
@@ -71,7 +46,7 @@ export default {
 }
 
 #text-subhome {
-  text-align: center;
+  text-align: left;
   font-size: initial;
 }
 
@@ -93,8 +68,21 @@ export default {
   max-width: 45vh;
 }
 
+li {
+  margin: 0;
+  margin-left: -6vh;
+  padding: 5px 0 5px 25px;
+  list-style: none;
+  background-image: url("./src/assets/images/DogHand.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 3vh;
+}
+
+/* <!----------------------- Media Query -------------------> */
+
 @media (min-width: 700px) {
-  #row {
+  #adopt {
     width: 100%;
     height: 100%;
     display: -webkit-inline-box;
@@ -116,6 +104,12 @@ export default {
   #text-home {
     font-family: "Amatic Sc";
     font-size: 10vh;
+    text-align: left;
+  }
+
+  #text-subhome {
+    text-align: left;
+    font-size: initial;
   }
 
   #btn-adote {
@@ -134,8 +128,20 @@ export default {
   }
 
   #logo-home {
-    max-width: 95vh;
-    margin-left: 17vh;
+    max-width: 90vh;
+    margin-left: 19vh;
+  }
+
+  li {
+    margin: 0;
+    margin-left: -6vh;
+    padding: 5px 0 5px 25px;
+    list-style: none;
+    background-image: url("./src/assets/images/DogHand.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 3vh;
   }
 }
 </style>
+

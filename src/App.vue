@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Home />
+    <router-view />
     <Footer />
   </div>
 </template>
@@ -9,14 +9,12 @@
 <script lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import Header from "./components/Header.vue";
-import Home from "./pages/Home.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Home,
     Footer,
   },
 };
