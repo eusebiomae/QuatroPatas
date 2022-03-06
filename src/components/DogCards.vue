@@ -39,12 +39,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* <!----------------------- Media Query --------------------> */
 .dogCard {
-  flex: 1 1 33.333%;
+  display: inline-block;
   width: 100%;
-  padding: 15px;
-  /* margin-inline: 25px; */
+  margin-bottom: 5vh;
+  /* margin-inline: 5vh; */
 }
 .dogCard-inner {
   position: relative;
@@ -57,10 +56,10 @@ export default defineComponent({
   width: 100%;
   filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
 }
+
 .dogCard-detail {
   text-align: center;
 }
-
 #btn-adote {
   width: 25vh;
 }
@@ -70,8 +69,45 @@ export default defineComponent({
 }
 #button-home {
   display: inline-block;
-  margin-inline: 1vh;
-  margin: 3vh;
+  margin-inline: 7px;
   margin-bottom: 0;
+}
+
+/* <!----------------------- Media Query --------------------> */
+@media (min-width: 700px) {
+  .dogCard {
+    flex: 1 1 33.333%;
+    width: 100%;
+    padding: 15px;
+    /* margin-inline: 25px; */
+  }
+  .dogCard-inner {
+    position: relative;
+    padding: 25px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    perspective: 1000px;
+  }
+
+  .dogCard-image-wrap .image {
+    width: 100%;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
+  }
+  .dogCard-detail {
+    text-align: center;
+  }
+
+  #btn-adote {
+    width: 25vh;
+  }
+  #btn-heart {
+    width: 7vh;
+    height: auto;
+  }
+  #button-home {
+    display: inline-block;
+    margin-inline: 2vh;
+    /* margin: 3vh; */
+    margin-bottom: 0;
+  }
 }
 </style>

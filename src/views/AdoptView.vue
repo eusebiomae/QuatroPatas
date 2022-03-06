@@ -145,6 +145,13 @@ li {
   background-size: 3vh;
 }
 
+.dogCards {
+  /* display: flex;
+  max-width: 1028px; */
+  margin-top: -15vh;
+  margin-inline: auto;
+}
+
 /* <!----------------------- Media Query -------------------> */
 
 @media (min-width: 700px) {
