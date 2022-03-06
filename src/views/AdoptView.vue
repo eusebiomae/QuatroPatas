@@ -1,5 +1,5 @@
 <template>
-  <div class="row" id="adopt">
+  <div id="adopt">
     <div class="col-lg-6 order-lg-last" id="text-left">
       <div class="">
         <h1 id="text-home">
@@ -20,16 +20,82 @@
       />
     </div>
   </div>
+  <section class="dogCards">
+    <DogCards
+      v-for="dogCard in dogCards"
+      :key="dogCard.color"
+      :dogCard="dogCard"
+    />
+  </section>
 </template>
 
+
 <script lang="ts">
-export default {
-  name: "Rules",
-};
+import { defineComponent } from "vue";
+import DogCards from "../components/DogCards.vue";
+export default defineComponent({
+  name: "Adopt",
+  components: { DogCards },
+  data() {
+    return {
+      dogCards: [
+        {
+          title: "Luigy Gonzales",
+          color: "blue",
+          desc: "Buldog, macho",
+          src: "./src/assets/Adopt/LuigyGonzales.png",
+        },
+        {
+          title: "Shakira Lopez",
+          color: "blue",
+          desc: "Amarelo, fêmea",
+          src: "./src/assets/Adopt/ShakiraLopez.png",
+        },
+        {
+          title: "Nico Di Angelo",
+          color: "blue",
+          desc: "Frajola, macho",
+          src: "./src/assets/Adopt/NicoDiAngelo.png",
+        },
+
+        // {
+        //   title: "Bartolomeu II",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/BartolomeuII.png",
+        // },
+        // {
+        //   title: "Marieta Soares",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/MarietaSoares.png",
+        // },
+        // {
+        //   title: "Pity Caramelo",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/PityCaramelo.png",
+        // },
+        // {
+        //   title: "Perseu Baptist",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/PerseuBaptist.png",
+        // },
+        // {
+        //   title: "Theodora Blanc",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/TheodoraBlanc.png",
+        // },
+        // {
+        //   title: "Rosinha Mali",
+        //   color: "blue",
+        //   src: "./src/assets/Adopt/RosinhaMali.png",
+        // },
+      ],
+    };
+  },
+});
 </script>
 
 <style scoped>
-#rules {
+#adopt {
   width: 100%;
   height: 100%;
   display: block;
@@ -141,6 +207,12 @@ li {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 3vh;
+  }
+  .dogCards {
+    display: flex;
+    max-width: 1028px;
+    margin-top: -65vh;
+    margin-inline: auto;
   }
 }
 </style>

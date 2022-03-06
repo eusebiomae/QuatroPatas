@@ -93,6 +93,8 @@ export default {
   max-width: 45vh;
 }
 
+/* <!------------------------Media Query --------------- > */
+
 @media (min-width: 700px) {
   #row {
     width: 100%;

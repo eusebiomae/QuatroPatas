@@ -28,6 +28,15 @@
         </ul>
         <p>Todo animal merece respeito!</p>
       </div>
+      <div id="button-home">
+        <router-link to="/adopt"
+          ><img
+            id="btn-adote"
+            src="@/assets/images/Adote.png"
+            alt="Home Btn"
+            class="btn"
+        /></router-link>
+      </div>
     </div>
 
     <div class="col-lg-6 order-first order-lg-last" id="img-home">
