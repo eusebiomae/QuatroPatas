@@ -61,31 +61,37 @@ export default defineComponent({
         {
           title: "Bartolomeu II",
           color: "blue",
+          desc: "Vira-lata, macho",
           src: "./src/assets/Adopt/BartolomeuII.png",
         },
         {
           title: "Marieta Soares",
           color: "blue",
+          desc: "Golden, fêmea",
           src: "./src/assets/Adopt/MarietaSoares.png",
         },
         {
           title: "Pity Caramelo",
           color: "blue",
+          desc: "Vira-lata, fêmea",
           src: "./src/assets/Adopt/PityCaramelo.png",
         },
         {
           title: "Perseu Baptist",
           color: "blue",
+          desc: "Rajado, macho",
           src: "./src/assets/Adopt/PerseuBaptist.png",
         },
         {
           title: "Theodora Blanc",
           color: "blue",
+          desc: "Albino, fêmea",
           src: "./src/assets/Adopt/TheodoraBlanc.png",
         },
         {
           title: "Rosinha Mali",
           color: "blue",
+          desc: "Escaminha, fêmea",
           src: "./src/assets/Adopt/RosinhaMali.png",
         },
       ],
@@ -156,12 +162,6 @@ li {
 /* <!----------------------- Media Query -------------------> */
 
 @media (min-width: 700px) {
-  /* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
-
   #adopt {
     width: 100%;
     height: 100%;

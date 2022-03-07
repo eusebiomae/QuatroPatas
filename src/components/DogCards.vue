@@ -7,6 +7,7 @@
       <div class="dogCard-detail">
         <h2>{{ dogCard.title }}</h2>
         <p>{{ dogCard.desc }}</p>
+        <br />
       </div>
 
       <div id="button-home">
@@ -75,7 +76,6 @@ export default defineComponent({
   display: inline-block;
   width: 100%;
   margin-bottom: 5vh;
-  /* margin-inline: 5vh; */
 }
 .dogCard-inner {
   position: relative;
@@ -122,8 +122,6 @@ export default defineComponent({
 /* <!----------------------- Media Query --------------------> */
 @media (min-width: 700px) {
   .dogCard {
-    /* flex: 1 0 33.33%; */
-    /* width: 33.33%; */
     flex-basis: 33.33%;
 
     padding: 15px;
@@ -153,13 +151,11 @@ export default defineComponent({
   #button-home {
     display: inline-block;
     margin-inline: 2vh;
-    /* margin: 3vh; */
     margin-bottom: 0;
   }
   #button-modal {
     display: inline-block;
     margin-inline: 2vh;
-    /* margin: 3vh; */
     margin-bottom: 0;
   }
 }
