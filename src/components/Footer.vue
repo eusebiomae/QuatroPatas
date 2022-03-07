@@ -88,6 +88,7 @@ footer {
 ul {
   list-style: none;
   margin-right: 5vh;
+  margin-top: 2vh;
 }
 
 ul li {
@@ -166,6 +167,7 @@ ul li {
     flex-direction: row;
     align-items: center;
     margin-left: 20vh;
+    margin-top: 0;
   }
   #phone-link {
     text-decoration: none;
