@@ -20,7 +20,7 @@
       />
     </div>
   </div>
-  <section class="dogCards">
+  <section id="dogCards">
     <DogCards
       v-for="dogCard in dogCards"
       :key="dogCard.color"
@@ -58,36 +58,36 @@ export default defineComponent({
           src: "./src/assets/Adopt/NicoDiAngelo.png",
         },
 
-        // {
-        //   title: "Bartolomeu II",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/BartolomeuII.png",
-        // },
-        // {
-        //   title: "Marieta Soares",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/MarietaSoares.png",
-        // },
-        // {
-        //   title: "Pity Caramelo",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/PityCaramelo.png",
-        // },
-        // {
-        //   title: "Perseu Baptist",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/PerseuBaptist.png",
-        // },
-        // {
-        //   title: "Theodora Blanc",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/TheodoraBlanc.png",
-        // },
-        // {
-        //   title: "Rosinha Mali",
-        //   color: "blue",
-        //   src: "./src/assets/Adopt/RosinhaMali.png",
-        // },
+        {
+          title: "Bartolomeu II",
+          color: "blue",
+          src: "./src/assets/Adopt/BartolomeuII.png",
+        },
+        {
+          title: "Marieta Soares",
+          color: "blue",
+          src: "./src/assets/Adopt/MarietaSoares.png",
+        },
+        {
+          title: "Pity Caramelo",
+          color: "blue",
+          src: "./src/assets/Adopt/PityCaramelo.png",
+        },
+        {
+          title: "Perseu Baptist",
+          color: "blue",
+          src: "./src/assets/Adopt/PerseuBaptist.png",
+        },
+        {
+          title: "Theodora Blanc",
+          color: "blue",
+          src: "./src/assets/Adopt/TheodoraBlanc.png",
+        },
+        {
+          title: "Rosinha Mali",
+          color: "blue",
+          src: "./src/assets/Adopt/RosinhaMali.png",
+        },
       ],
     };
   },
@@ -145,16 +145,23 @@ li {
   background-size: 3vh;
 }
 
-.dogCards {
-  /* display: flex;
-  max-width: 1028px; */
+#dogCards {
+  display: flex;
+  max-width: 1028px;
   margin-top: -15vh;
-  margin-inline: auto;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 /* <!----------------------- Media Query -------------------> */
 
 @media (min-width: 700px) {
+  /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
   #adopt {
     width: 100%;
     height: 100%;
@@ -215,11 +222,9 @@ li {
     background-position: left center;
     background-size: 3vh;
   }
-  .dogCards {
-    display: flex;
-    max-width: 1028px;
+  #dogCards {
+    max-width: 1280px;
     margin-top: -65vh;
-    margin-inline: auto;
   }
 }
 </style>

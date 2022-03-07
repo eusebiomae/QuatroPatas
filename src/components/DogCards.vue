@@ -1,5 +1,5 @@
 <template>
-  <div id="dogCards" class="dogCard">
+  <div class="dogCard">
     <div class="dogCard-inner">
       <div class="dogCard-image-wrap">
         <img :src="dogCard.src" class="image" />
@@ -8,8 +8,9 @@
         <h2>{{ dogCard.title }}</h2>
         <p>{{ dogCard.desc }}</p>
       </div>
+
       <div id="button-home">
-        <router-link to="/heart"
+        <router-link to=""
           ><img
             id="btn-heart"
             src="@/assets/images/heart2.png"
@@ -17,24 +18,55 @@
             class="btn"
         /></router-link>
       </div>
-      <div id="button-home">
-        <router-link to="/adopt"
-          ><img
+
+      <div id="button-modal">
+        <span>
+          <img
             id="btn-adote"
             src="@/assets/images/Adote.png"
             alt="Home Btn"
             class="btn"
-        /></router-link>
+        /></span>
+
+        <!-- <div>
+          <img
+            id="btn-adote"
+            src="@/assets/images/Close2x.png"
+            alt="Home Btn"
+            class="btn"
+          />
+        </div> -->
+
+        <!-- <div id="menu-items" :class="{ active: showModal }"></div> -->
       </div>
     </div>
   </div>
+  <!-- <modal v-if="showModal" v-on:click="openModal" id="modal-overlay">
+    <span slot="header">Conteudo</span>
+  </modal> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   name: "DogCards",
   props: ["dogCard"],
+  // data() {
+  //   return {
+  //     showModal: false,
+  //   };
+  // },
+
+  // methods: {
+  //   openModal: function () {
+  //     this.showModal = true;
+  //   },
+
+  //   closeModal: function () {
+  //     this.showModal = false;
+  //   },
+  // },
 });
 </script>
 
@@ -72,14 +104,29 @@ export default defineComponent({
   margin-inline: 7px;
   margin-bottom: 0;
 }
+#button-modal {
+  display: inline-block;
+  margin-inline: 7px;
+  margin-bottom: 0;
+}
+#modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.6;
+}
 
 /* <!----------------------- Media Query --------------------> */
 @media (min-width: 700px) {
   .dogCard {
-    flex: 1 1 33.333%;
-    width: 100%;
+    /* flex: 1 0 33.33%; */
+    /* width: 33.33%; */
+    flex-basis: 33.33%;
+
     padding: 15px;
-    /* margin-inline: 25px; */
   }
   .dogCard-inner {
     position: relative;
@@ -104,6 +151,12 @@ export default defineComponent({
     height: auto;
   }
   #button-home {
+    display: inline-block;
+    margin-inline: 2vh;
+    /* margin: 3vh; */
+    margin-bottom: 0;
+  }
+  #button-modal {
     display: inline-block;
     margin-inline: 2vh;
     /* margin: 3vh; */
