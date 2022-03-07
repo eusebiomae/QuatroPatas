@@ -57,22 +57,31 @@ export default {
 #row {
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #text-left {
-  margin-top: 20vh;
+  margin-top: 75vh;
 }
 
 #text-home {
   font-family: "Amatic Sc";
   font-size: 7vh;
   text-align: center;
+  margin-left: -45vh;
+  margin-bottom: 5vh;
 }
 
 #text-subhome {
   text-align: center;
   font-size: initial;
+  margin-left: -45vh;
+  margin-bottom: 5vh;
+}
+#button-home {
+  margin-left: -44vh;
+  margin-bottom: 5vh;
 }
 
 #btn-adote {
@@ -85,7 +94,7 @@ export default {
 }
 
 #img-home {
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 25vh;
 }
 
@@ -118,11 +127,21 @@ export default {
   #text-home {
     font-family: "Amatic Sc";
     font-size: 10vh;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 15vh;
   }
 
   #text-subhome {
     text-align: left;
     font-size: initial;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  #button-home {
+    margin-left: 0;
+    margin-bottom: 0;
   }
 
   #btn-adote {

@@ -104,11 +104,14 @@ export default defineComponent({
 #adopt {
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #text-left {
-  margin-top: 20vh;
+  margin-top: 70vh;
+  margin-left: -45vh;
+  margin-bottom: 25vh;
 }
 
 #text-home {
@@ -132,7 +135,7 @@ export default defineComponent({
 }
 
 #img-home {
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 25vh;
 }
 
@@ -175,7 +178,7 @@ li {
   }
 
   #text-left {
-    margin-top: 10vh;
+    margin-top: 30vh;
     margin-right: 2vh;
     margin-left: 15vh;
     margin-bottom: 25vh;
@@ -203,7 +206,7 @@ li {
   }
 
   #img-home {
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-bottom: 25vh;
   }
 
@@ -224,7 +227,7 @@ li {
   }
   #dogCards {
     max-width: 1280px;
-    margin-top: -65vh;
+    margin-top: -50vh;
   }
 }
 </style>
