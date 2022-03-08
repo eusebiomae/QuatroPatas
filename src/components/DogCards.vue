@@ -69,6 +69,7 @@ export default defineComponent({
   padding: 25px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   perspective: 1000px;
+  border-radius: 10px;
 }
 
 .dogCard-image-wrap .image {
@@ -110,7 +111,6 @@ export default defineComponent({
   background-color: #e2e2e2;
   border: none;
   border-radius: 10px;
-  color: #fff;
   font-size: 15px;
   text-align: center;
 }
@@ -157,6 +157,7 @@ export default defineComponent({
     padding: 25px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     perspective: 1000px;
+    border-radius: 10px;
   }
 
   .dogCard-image-wrap .image {
@@ -194,7 +195,6 @@ export default defineComponent({
     background-color: #e2e2e2;
     border: none;
     border-radius: 10px;
-    color: #fff;
     font-size: 15px;
     text-align: center;
   }
