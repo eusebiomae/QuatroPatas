@@ -82,6 +82,9 @@ export default defineComponent({
 
 .btn-group {
   margin-inline: 1vh;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .btn-adote {
@@ -103,7 +106,21 @@ export default defineComponent({
 
 .btn-heart {
   width: 7vh;
-  height: auto;
+  height: 7vh;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+}
+
+.heart-icon {
+  width: 20px;
+  fill: #afaaaa;
+}
+.heart-icon:hover {
+  width: 23px;
 }
 
 .button-heart {
