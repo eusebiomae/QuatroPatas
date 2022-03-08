@@ -164,7 +164,7 @@ li {
 
 /* <!----------------------- Media Query -------------------> */
 
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
   #adopt {
     width: 100%;
     height: 100%;
