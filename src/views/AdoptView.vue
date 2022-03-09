@@ -194,6 +194,7 @@ li {
   #text-subhome {
     text-align: left;
     font-size: initial;
+    font-family: "Nunito", sans-serif;
   }
 
   #btn-adote {

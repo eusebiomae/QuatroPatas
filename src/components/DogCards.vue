@@ -12,11 +12,29 @@
 
       <div class="btn-group">
         <div class="button-heart">
-          <button class="btn-heart" icon="fa-solid fa-heart">
+          <button
+            v-on:click="openModalHeart"
+            :addClass="heartActive"
+            class="btn-heart"
+            icon="fa-solid fa-heart"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
               class="heart-icon"
+              v-if="heartNonActive"
+            >
+              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="heart-icon-red"
+              v-if="heartActive"
             >
               <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
               <path
@@ -26,8 +44,45 @@
           </button>
         </div>
 
-        <div class="button-modal">
-          <button class="btn-adote">Adote agora</button>
+        <button v-on:click="openModal" class="btn-adote">Adote agora</button>
+      </div>
+    </div>
+    <!--------------------------- Modal -------------------->
+    <div class="button-modal">
+      <div v-if="showModal" class="modal-overlay">
+        <img
+          v-on:click="closeModal"
+          v-if="showModal"
+          class="modal-img"
+          src="@/assets/images/AdoptModal.png"
+          alt=""
+        />
+      </div>
+
+      <div v-if="showModalHeart" class="modal-overlay">
+        <div class="card-modal">
+          <div class="card-modalDetails">
+            <img
+              class="img-modal"
+              src="@/assets/images/FavModalDog.png"
+              alt=""
+            />
+            <div class="text-modal">
+              <h2><b>FAVORITADO COM AMOR!</b></h2>
+            </div>
+            <p class="subtext-modal">
+              Obrigado por seu interesse <br />
+              em nossos amigos! <br />
+              Esperamos ansiosos pela sua adoção!
+            </p>
+          </div>
+          <img
+            class="icon-close"
+            v-on:click="closeModalHeart"
+            v-if="showModalHeart"
+            src="@/assets/images/Close.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -43,6 +98,9 @@ export default defineComponent({
   data() {
     return {
       showModal: false,
+      showModalHeart: false,
+      heartActive: false,
+      heartNonActive: true,
     };
   },
 
@@ -53,6 +111,21 @@ export default defineComponent({
 
     closeModal: function () {
       this.showModal = false;
+    },
+
+    openModalHeart: function () {
+      this.showModalHeart = true;
+      this.heartActive = true;
+      this.heartNonActive = false;
+    },
+
+    closeModalHeart: function () {
+      this.showModalHeart = false;
+    },
+
+    closeRedHeart: function () {
+      this.heartActive = false;
+      this.heartNonActive = true;
     },
   },
 });
@@ -70,6 +143,45 @@ export default defineComponent({
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   perspective: 1000px;
   border-radius: 10px;
+}
+.card-modal {
+  display: flex;
+  margin-inline: 5vh;
+  margin-top: 34vh;
+  padding: 25px;
+  width: 45vh;
+  height: 30vh;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  perspective: 300px;
+  border-radius: 10px;
+  background-color: #d88bb9;
+  border: 5px solid #fff;
+}
+.img-modal {
+  width: 15vh;
+}
+
+.icon-close {
+  width: 25px;
+  height: 25px;
+  display: flex;
+}
+.text-modal {
+  display: flex;
+  float: right;
+  margin-top: -20vh;
+  margin-right: -15px;
+  color: #000;
+}
+.subtext-modal {
+  display: flex;
+  float: right;
+  margin-top: -12vh;
+  margin-right: -25px;
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: #000;
 }
 
 .dogCard-image-wrap .image {
@@ -122,6 +234,13 @@ export default defineComponent({
 .heart-icon:hover {
   width: 23px;
 }
+.heart-icon-red {
+  width: 20px;
+  fill: red;
+}
+.heart-icon-red:hover {
+  width: 23px;
+}
 
 .button-heart {
   display: inline-block;
@@ -134,15 +253,25 @@ export default defineComponent({
   margin-inline: 7px;
   margin-bottom: 0;
 }
-
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.95;
+  z-index: 1;
+}
+.modal-img {
+  top: 30vh;
+  width: 35vh;
+  height: 35vh;
+  z-index: 1;
+  position: fixed;
+  margin-inline: 10vh;
+  vertical-align: middle;
+  align-items: center;
 }
 
 /* <!----------------------- Media Query --------------------> */
@@ -166,6 +295,45 @@ export default defineComponent({
   }
   .dogCard-detail {
     text-align: center;
+  }
+
+  .card-modal {
+    display: flex;
+    margin-inline: 75vh;
+    margin-top: 25vh;
+    padding: 25px;
+    width: 70vh;
+    height: 50vh;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    perspective: 300px;
+    border-radius: 10px;
+    background-color: #d88bb9;
+    border: 5px solid #fff;
+  }
+  .img-modal {
+    width: 25vh;
+  }
+  .icon-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+  }
+  .text-modal {
+    display: flex;
+    float: right;
+    margin-top: -33vh;
+    font-size: 4vh;
+    margin-right: -30px;
+  }
+  .subtext-modal {
+    display: flex;
+    float: right;
+    margin-top: -20vh;
+    margin-right: -30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
   }
   .btn-group {
     margin-inline: 3vh;
@@ -216,6 +384,26 @@ export default defineComponent({
     display: inline-block;
     margin-inline: 2vh;
     margin-bottom: 0;
+  }
+  .modal-overlay {
+    position: fixed;
+    /* background-size: cover; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.95;
+    z-index: 1;
+  }
+  .modal-img {
+    top: 20vh;
+    left: 75vh;
+    width: 65vh;
+    height: 60vh;
+    z-index: 1;
+    position: fixed;
+    margin-inline: 0;
   }
 }
 </style>
