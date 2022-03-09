@@ -70,6 +70,7 @@ footer {
   text-align: center;
   margin-top: 5vh;
   margin-bottom: 5vh;
+  font-family: "Nunito", sans-serif;
 }
 
 #subfooter {
@@ -81,6 +82,7 @@ footer {
   left: 0;
   right: 0;
   display: block;
+  font-family: "Nunito", sans-serif;
   /* flex-direction: none; */
   /* justify-content: flex-start; */
 }

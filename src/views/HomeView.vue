@@ -1,8 +1,8 @@
 <template>
-  <div class="row" id="row">
+  <div class="home">
     <div class="col-lg-6 order-lg-last" id="text-left">
       <div class="">
-        <h1 id="text-home">
+        <h1 class="text-home">
           <b
             >Procurando um novo <br />
             amigo?</b
@@ -10,7 +10,7 @@
         </h1>
       </div>
 
-      <div id="text-subhome">
+      <div class="text-subhome">
         <p>
           A <b>Quatro Patas</b> pode ajudar nessa missão! <br />
           Doguinhos e Gatinhos estão esperando para fazer você feliz! <br />
@@ -18,21 +18,18 @@
         </p>
       </div>
 
-      <div id="button-home">
-        <router-link to="/adopt"
-          ><img
-            id="btn-adote"
-            src="@/assets/images/Adote.png"
-            alt="Home Btn"
-            class="btn"
-        /></router-link>
-        <router-link to="/rules"
-          ><img
-            id="btn-regras"
-            src="@/assets/images/NossasRegras.png"
-            alt="Home Btn Regras"
-            class="btn"
-        /></router-link>
+      <div class="btn-group">
+        <router-link to="/adopt">
+          <div>
+            <button class="btn-adote">Adote agora</button>
+          </div>
+        </router-link>
+
+        <router-link to="/rules">
+          <div>
+            <button class="btn-rules">Nossas Regras</button>
+          </div>
+        </router-link>
       </div>
     </div>
 
@@ -40,7 +37,6 @@
       <img
         alt="Vue logo"
         class="logo-home"
-        id="logo-home"
         src="@/assets/images/HomeDog2x.png"
       />
     </div>
@@ -54,7 +50,7 @@ export default {
 </script>
 
 <style scoped>
-#row {
+.home {
   width: 100%;
   height: 100%;
   display: flex;
@@ -65,7 +61,7 @@ export default {
   margin-top: 75vh;
 }
 
-#text-home {
+.text-home {
   font-family: "Amatic Sc";
   font-size: 7vh;
   text-align: center;
@@ -73,15 +69,52 @@ export default {
   margin-bottom: 5vh;
 }
 
-#text-subhome {
+.text-subhome {
   text-align: center;
   font-size: initial;
+  font-family: "Nunito", sans-serif;
   margin-left: -45vh;
   margin-bottom: 5vh;
 }
-#button-home {
-  margin-left: -44vh;
+
+.btn-group {
+  margin-left: -39vh;
   margin-bottom: 5vh;
+}
+.btn-adote {
+  width: 35vh;
+  height: 10vh;
+  background-color: #7818d9;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+}
+.btn-adote:hover {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border: 2px solid #904dd3;
+}
+.btn-rules {
+  width: 35vh;
+  height: 10vh;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  border: 2px solid #904dd3;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.btn-rules:hover {
+  background-color: #7818d9;
+  color: #fff;
+  text-align: center;
 }
 
 #btn-adote {
@@ -98,14 +131,14 @@ export default {
   margin-bottom: 25vh;
 }
 
-#logo-home {
+.logo-home {
   max-width: 45vh;
 }
 
 /* <!------------------------Media Query --------------- > */
 
 @media (min-width: 700px) {
-  #row {
+  .home {
     width: 100%;
     height: 100%;
     display: -webkit-inline-box;
@@ -124,34 +157,65 @@ export default {
     margin-bottom: 25vh;
   }
 
-  #text-home {
+  .text-home {
     font-family: "Amatic Sc";
     font-size: 10vh;
     margin-left: 0;
-    margin-bottom: 0;
+    margin-bottom: 2vh;
     margin-top: 15vh;
   }
 
-  #text-subhome {
+  .text-subhome {
     text-align: left;
     font-size: initial;
+    font-family: "Nunito", sans-serif;
+    margin-left: 0;
+    margin-bottom: 2vh;
+  }
+  .btn-group {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
     margin-left: 0;
     margin-bottom: 0;
   }
 
-  #button-home {
-    margin-left: 0;
+  .btn-adote {
+    width: 30vh;
+    height: 8vh;
+    background-color: #7818d9;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 3vh;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .btn-adote:hover {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border: 2px solid #7818d9;
+  }
+  .btn-rules {
+    width: 30vh;
+    height: 8vh;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #7818d9;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
     margin-bottom: 0;
   }
-
-  #btn-adote {
-    width: 190px;
-    margin-top: 25px;
-  }
-  #btn-regras {
-    width: 190px;
-    margin-top: 25px;
-    margin-left: 15px;
+  .btn-rules:hover {
+    background-color: #7818d9;
+    color: #fff;
+    text-align: center;
   }
 
   #img-home {
@@ -159,7 +223,7 @@ export default {
     margin-bottom: 25vh;
   }
 
-  #logo-home {
+  .logo-home {
     max-width: 95vh;
     margin-left: 17vh;
   }

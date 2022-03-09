@@ -1,13 +1,13 @@
 <template>
-  <div class="row" id="rules">
+  <div class="rules">
     <div class="col-lg-6 order-lg-last" id="text-left">
       <div class="">
-        <h1 id="text-home">
+        <h1 class="text-home">
           <b>Nossas Regras</b>
         </h1>
       </div>
 
-      <div id="text-subhome">
+      <div class="text-subhome">
         <p>
           Sem sombra de dúvidas queremos <b>o melhor</b> para os nossos <br />
           peludinhos, portanto queremos esclerecer quais são os requisitos
@@ -15,7 +15,7 @@
           para você ter um novo membro na família:
         </p>
       </div>
-      <div id="rules-details">
+      <div class="rules-details">
         <ul>
           <li>Carinho e atenção não pode faltar;</li>
           <li>Cuide de pulgas, carrapatos, entre outros parasitas;</li>
@@ -26,16 +26,16 @@
             A castração é importante para previnir doenças e a procriação.
           </li>
         </ul>
+        <br />
         <p>Todo animal merece respeito!</p>
       </div>
-      <div id="button-rules">
-        <router-link to="/adopt"
-          ><img
-            id="btn-adote"
-            src="@/assets/images/Adote.png"
-            alt="Home Btn"
-            class="btn"
-        /></router-link>
+
+      <div class="button-rules-adopt">
+        <router-link to="/adopt">
+          <div>
+            <button class="btn-adote">Adote agora</button>
+          </div>
+        </router-link>
       </div>
     </div>
 
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style scoped>
-#rules {
+.rules {
   width: 100%;
   height: 100%;
   display: flex;
@@ -70,25 +70,46 @@ export default {
   margin-bottom: 10vh;
 }
 
-#text-home {
+.text-home {
   font-family: "Amatic Sc";
   font-size: 7vh;
   text-align: center;
+  margin-bottom: 3vh;
 }
 
-#text-subhome {
+.text-subhome {
   text-align: left;
   font-size: initial;
+  font-family: "Nunito", sans-serif;
   margin-bottom: 5vh;
 }
 
-#button-rules {
+.button-rules-adopt {
   margin-top: 3vh;
 }
 
-#btn-adote {
-  width: auto;
-  margin-top: 25px;
+/* #btn-adote {
+
+} */
+.btn-adote {
+  width: 35vh;
+  height: 10vh;
+  background-color: #7818d9;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 3vh;
+  margin-bottom: 0;
+  margin-top: 5vh;
+  margin-inline: 5vh;
+}
+.btn-adote:hover {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border: 2px solid #7818d9;
 }
 #btn-regras {
   width: auto;
@@ -113,12 +134,17 @@ li {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 3vh;
+  font-family: "Nunito", sans-serif;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
 }
 
 /* <!----------------------- Media Query -------------------> */
 
 @media (min-width: 700px) {
-  #rules {
+  .rules {
     width: 100%;
     height: 100%;
     display: -webkit-inline-box;
@@ -137,24 +163,37 @@ li {
     margin-bottom: 25vh;
   }
 
-  #text-home {
+  .text-home {
     font-family: "Amatic Sc";
     font-size: 10vh;
+    margin-bottom: 3vh;
   }
 
-  #text-subhome {
+  .text-subhome {
     text-align: left;
     font-size: initial;
+    font-family: "Nunito", sans-serif;
   }
 
-  #btn-adote {
-    width: 190px;
-    margin-top: 25px;
+  .btn-adote {
+    width: 30vh;
+    height: 8vh;
+    background-color: #7818d9;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 3vh;
+    margin-bottom: 0;
+    margin-top: 7vh;
+    margin-inline: 0;
   }
-  #btn-regras {
-    width: 190px;
-    margin-top: 25px;
-    margin-left: 15px;
+  .btn-adote:hover {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border: 2px solid #7818d9;
   }
 
   #img-home {
@@ -176,6 +215,7 @@ li {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 3vh;
+    font-family: "Nunito", sans-serif;
   }
 }
 </style>

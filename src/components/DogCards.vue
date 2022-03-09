@@ -79,6 +79,7 @@ export default defineComponent({
 
 .dogCard-detail {
   text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .btn-group {
@@ -101,7 +102,6 @@ export default defineComponent({
 
 .btn-adote:hover {
   background-color: #904dd3;
-  font-size: 16px;
   text-align: center;
 }
 
@@ -185,9 +185,10 @@ export default defineComponent({
     text-align: center;
   }
   .btn-adote:hover {
-    background-color: #904dd3;
-    font-size: 16px;
+    background-color: #fff;
+    color: #000;
     text-align: center;
+    border: 2px solid #7818d9;
   }
   .btn-heart {
     width: 7vh;

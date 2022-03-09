@@ -24,6 +24,7 @@ export default {
 <style>
 @import "@/assets/base.css";
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 #app {
   width: fit-content;

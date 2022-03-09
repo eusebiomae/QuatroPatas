@@ -20,7 +20,7 @@
       />
     </div>
   </div>
-  <section id="dogCards">
+  <section class="dogCards">
     <DogCards
       v-for="dogCard in dogCards"
       :key="dogCard.color"
@@ -123,6 +123,7 @@ export default defineComponent({
 #text-subhome {
   text-align: left;
   font-size: initial;
+  font-family: "Nunito", sans-serif;
 }
 
 #btn-adote {
@@ -154,7 +155,7 @@ li {
   background-size: 3vh;
 }
 
-#dogCards {
+.dogCards {
   display: flex;
   max-width: 1028px;
   margin-top: -15vh;
@@ -225,7 +226,7 @@ li {
     background-position: left center;
     background-size: 3vh;
   }
-  #dogCards {
+  .dogCards {
     max-width: 1280px;
     margin-top: -50vh;
   }
