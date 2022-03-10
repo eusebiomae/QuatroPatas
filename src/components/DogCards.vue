@@ -50,13 +50,34 @@
     <!--------------------------- Modal -------------------->
     <div class="button-modal">
       <div v-if="showModal" class="modal-overlay">
-        <img
-          v-on:click="closeModal"
-          v-if="showModal"
-          class="modal-img"
-          src="@/assets/images/AdoptModal.png"
-          alt=""
-        />
+        <div class="card-modalAdopt">
+          <div class="card-modalDetails">
+            <img
+              class="img-modalAdopt"
+              src="@/assets/images/AdoptModalDog2.png"
+              alt=""
+            />
+            <div class="text-modalAdopt">
+              <h2>
+                <b
+                  >Você ganhou <br />
+                  um novo amiguinho!</b
+                >
+              </h2>
+            </div>
+            <p class="subtext-modalAdopt">
+              Obrigado por sua adoção, <br />
+              ficamos felizes por você e por ele!
+            </p>
+          </div>
+          <img
+            class="icon-close"
+            v-on:click="closeModal"
+            v-if="showModal"
+            src="@/assets/images/Close.png"
+            alt=""
+          />
+        </div>
       </div>
 
       <div v-if="showModalHeart" class="modal-overlay">
@@ -86,6 +107,7 @@
         </div>
       </div>
     </div>
+    <!---------------------------- Fim do Modal -------------------->
   </div>
 </template>
 
@@ -150,15 +172,32 @@ export default defineComponent({
   margin-top: 34vh;
   padding: 25px;
   width: 45vh;
-  height: 30vh;
+  height: 35vh;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   perspective: 300px;
   border-radius: 10px;
   background-color: #d88bb9;
   border: 5px solid #fff;
 }
+.card-modalAdopt {
+  display: flex;
+  margin-inline: 5vh;
+  margin-top: 34vh;
+  padding: 25px;
+  width: 45vh;
+  height: 35vh;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  perspective: 300px;
+  border-radius: 10px;
+  background-color: #91d88b;
+  border: 5px solid #fff;
+}
 .img-modal {
   width: 15vh;
+}
+.img-modalAdopt {
+  width: 55px;
+  margin-bottom: -40px;
 }
 
 .icon-close {
@@ -173,6 +212,13 @@ export default defineComponent({
   margin-right: -15px;
   color: #000;
 }
+.text-modalAdopt {
+  display: flex;
+  float: right;
+  margin-top: 2vh;
+  margin-left: 18px;
+  color: #000;
+}
 .subtext-modal {
   display: flex;
   float: right;
@@ -180,6 +226,16 @@ export default defineComponent({
   margin-right: -25px;
   font-family: "Nunito", sans-serif;
   font-size: 10px;
+  text-align: center;
+  color: #000;
+}
+.subtext-modalAdopt {
+  display: flex;
+  float: right;
+  margin-top: -7vh;
+  margin-right: -5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
   text-align: center;
   color: #000;
 }
@@ -310,8 +366,25 @@ export default defineComponent({
     background-color: #d88bb9;
     border: 5px solid #fff;
   }
+  .card-modalAdopt {
+    display: flex;
+    margin-inline: 75vh;
+    margin-top: 25vh;
+    padding: 25px;
+    width: 70vh;
+    height: 50vh;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    perspective: 300px;
+    border-radius: 10px;
+    background-color: #91d88b;
+    border: 5px solid #fff;
+  }
   .img-modal {
     width: 25vh;
+  }
+  .img-modalAdopt {
+    width: 80px;
+    /* margin-bottom: -40px; */
   }
   .icon-close {
     width: 30px;
@@ -325,11 +398,28 @@ export default defineComponent({
     font-size: 4vh;
     margin-right: -30px;
   }
+  .text-modalAdopt {
+    display: flex;
+    float: right;
+    font-size: 4vh;
+    margin-right: 5px;
+  }
+
   .subtext-modal {
     display: flex;
     float: right;
     margin-top: -20vh;
     margin-right: -30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+  }
+  .subtext-modalAdopt {
+    display: flex;
+    float: right;
+    margin-top: -65px;
+    margin-right: 10px;
     font-family: "Nunito", sans-serif;
     font-size: 15px;
     text-align: center;
