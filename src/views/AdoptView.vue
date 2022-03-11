@@ -23,7 +23,7 @@
   <section class="dogCards">
     <DogCards
       v-for="dogCard in dogCards"
-      :key="dogCard.color"
+      :key="dogCard.title"
       :dogCard="dogCard"
     />
   </section>
@@ -41,56 +41,47 @@ export default defineComponent({
       dogCards: [
         {
           title: "Luigy Gonzales",
-          color: "blue",
           desc: "Buldog, macho",
           src: "./src/assets/Adopt/LuigyGonzales.png",
         },
         {
           title: "Shakira Lopez",
-          color: "blue",
           desc: "Amarelo, fêmea",
           src: "./src/assets/Adopt/ShakiraLopez.png",
         },
         {
           title: "Nico Di Angelo",
-          color: "blue",
           desc: "Frajola, macho",
           src: "./src/assets/Adopt/NicoDiAngelo.png",
         },
 
         {
           title: "Bartolomeu II",
-          color: "blue",
           desc: "Vira-lata, macho",
           src: "./src/assets/Adopt/BartolomeuII.png",
         },
         {
           title: "Marieta Soares",
-          color: "blue",
           desc: "Golden, fêmea",
           src: "./src/assets/Adopt/MarietaSoares.png",
         },
         {
           title: "Pity Caramelo",
-          color: "blue",
           desc: "Vira-lata, fêmea",
           src: "./src/assets/Adopt/PityCaramelo.png",
         },
         {
           title: "Perseu Baptist",
-          color: "blue",
           desc: "Rajado, macho",
           src: "./src/assets/Adopt/PerseuBaptist.png",
         },
         {
           title: "Theodora Blanc",
-          color: "blue",
           desc: "Albino, fêmea",
           src: "./src/assets/Adopt/TheodoraBlanc.png",
         },
         {
           title: "Rosinha Mali",
-          color: "blue",
           desc: "Escaminha, fêmea",
           src: "./src/assets/Adopt/RosinhaMali.png",
         },
