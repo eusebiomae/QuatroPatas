@@ -199,7 +199,7 @@ p {
 
   #logo-home {
     max-width: 95vh;
-    margin-left: 17vh;
+    margin-left: 15vh;
   }
 
   li {
