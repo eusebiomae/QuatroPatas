@@ -135,7 +135,7 @@ export default {
   max-width: 45vh;
 }
 
-/* <!------------------------Media Query --------------- > */
+/* <!------------------------ Media Query Desktop--------------- > */
 
 @media (min-width: 700px) {
   .home {

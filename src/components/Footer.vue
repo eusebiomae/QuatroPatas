@@ -28,17 +28,17 @@
       </p>
       <br />
     </div>
-  </footer>
-  <footer id="subfooter" class="footer">
-    <ul>
-      <li>Copyright 2022. Todos os direitos reservados</li>
-    </ul>
-    <ul>
-      <li>
-        Violência contra animais é crime. Denuncie
-        <a href="tel:0800-600-6428" class="" id="phone-link">0800 600 6428</a>
-      </li>
-    </ul>
+    <div class="subfooter">
+      <ul>
+        <li>Copyright 2022. Todos os direitos reservados</li>
+      </ul>
+      <ul>
+        <li>
+          Violência contra animais é crime. Denuncie
+          <a href="tel:0800-600-6428" class="" id="phone-link">0800 600 6428</a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
 
@@ -56,8 +56,6 @@ footer {
   position: absolute;
   display: block;
   left: 0;
-  /* justify-content: flex-start; */
-  /* align-items: center; */
 }
 
 #logo-footer {
@@ -73,18 +71,16 @@ footer {
   font-family: "Nunito", sans-serif;
 }
 
-#subfooter {
+.subfooter {
   width: 100%;
   height: 135px;
   background: #6c3659;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   display: block;
   font-family: "Nunito", sans-serif;
-  /* flex-direction: none; */
-  /* justify-content: flex-start; */
 }
 
 ul {
@@ -124,7 +120,7 @@ ul li {
   color: #9b5cda;
 }
 
-/* <!------------ Media Query ------------------> */
+/* <!------------ Media Query Desktop ------------------> */
 
 @media (min-width: 700px) {
   footer {
@@ -150,17 +146,15 @@ ul li {
     text-align: left;
   }
 
-  #subfooter {
+  .subfooter {
     width: 100%;
     height: 35px;
     background: #6c3659;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     left: 0;
-    right: 0;
     display: flex;
-    flex-direction: none;
     justify-content: flex-start;
+    align-items: center;
   }
 
   ul {

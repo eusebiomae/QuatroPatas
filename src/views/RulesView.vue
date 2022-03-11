@@ -87,10 +87,6 @@ export default {
 .button-rules-adopt {
   margin-top: 3vh;
 }
-
-/* #btn-adote {
-
-} */
 .btn-adote {
   width: 35vh;
   height: 10vh;
@@ -141,7 +137,7 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
-/* <!----------------------- Media Query -------------------> */
+/* <!----------------------- Media Query Desktop -------------------> */
 
 @media (min-width: 700px) {
   .rules {

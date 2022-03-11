@@ -128,6 +128,7 @@ export default defineComponent({
 
       this.heartActive = !this.heartActive;
     },
+
     closeModalHeart: function () {
       this.showModalHeart = false;
     },
@@ -312,11 +313,10 @@ export default defineComponent({
   align-items: center;
 }
 
-/* <!----------------------- Media Query --------------------> */
+/* <!----------------------- Media Query Desktop  --------------------> */
 @media (min-width: 700px) {
   .dogCard {
     flex-basis: 33.33%;
-
     padding: 15px;
   }
   .dogCard-inner {
@@ -333,79 +333,6 @@ export default defineComponent({
   }
   .dogCard-detail {
     text-align: center;
-  }
-
-  .card-modal {
-    display: flex;
-    margin-inline: 75vh;
-    margin-top: 25vh;
-    padding: 25px;
-    width: 70vh;
-    height: 50vh;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
-    perspective: 300px;
-    border-radius: 10px;
-    background-color: #d88bb9;
-    border: 5px solid #fff;
-  }
-  .card-modalAdopt {
-    display: flex;
-    margin-inline: 75vh;
-    margin-top: 25vh;
-    padding: 25px;
-    width: 70vh;
-    height: 50vh;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
-    perspective: 300px;
-    border-radius: 10px;
-    background-color: #91d88b;
-    border: 5px solid #fff;
-  }
-  .img-modal {
-    width: 25vh;
-  }
-  .img-modalAdopt {
-    width: 80px;
-    /* margin-bottom: -40px; */
-  }
-  .icon-close {
-    width: 30px;
-    height: 30px;
-    display: flex;
-  }
-  .text-modal {
-    display: flex;
-    float: right;
-    margin-top: -33vh;
-    font-size: 4vh;
-    margin-right: -30px;
-  }
-  .text-modalAdopt {
-    display: flex;
-    float: right;
-    font-size: 4vh;
-    margin-right: 5px;
-  }
-
-  .subtext-modal {
-    display: flex;
-    float: right;
-    margin-top: -20vh;
-    margin-right: -30px;
-    font-family: "Nunito", sans-serif;
-    font-size: 15px;
-    text-align: center;
-    color: #000;
-  }
-  .subtext-modalAdopt {
-    display: flex;
-    float: right;
-    margin-top: -65px;
-    margin-right: 10px;
-    font-family: "Nunito", sans-serif;
-    font-size: 15px;
-    text-align: center;
-    color: #000;
   }
   .btn-group {
     margin-inline: 3vh;
@@ -459,7 +386,6 @@ export default defineComponent({
   }
   .modal-overlay {
     position: fixed;
-    /* background-size: cover; */
     top: 0;
     left: 0;
     width: 100%;
@@ -476,6 +402,78 @@ export default defineComponent({
     z-index: 1;
     position: fixed;
     margin-inline: 0;
+  }
+
+  .card-modal {
+    display: flex;
+    margin-inline: 75vh;
+    margin-top: 25vh;
+    padding: 25px;
+    width: 70vh;
+    height: 50vh;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    perspective: 300px;
+    border-radius: 10px;
+    background-color: #d88bb9;
+    border: 5px solid #fff;
+  }
+  .card-modalAdopt {
+    display: flex;
+    margin-inline: 75vh;
+    margin-top: 25vh;
+    padding: 25px;
+    width: 70vh;
+    height: 50vh;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    perspective: 300px;
+    border-radius: 10px;
+    background-color: #91d88b;
+    border: 5px solid #fff;
+  }
+  .img-modal {
+    width: 25vh;
+  }
+  .img-modalAdopt {
+    width: 80px;
+  }
+  .icon-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+  }
+  .text-modal {
+    display: flex;
+    float: right;
+    margin-top: -33vh;
+    font-size: 4vh;
+    margin-right: -30px;
+  }
+  .text-modalAdopt {
+    display: flex;
+    float: right;
+    font-size: 4vh;
+    margin-right: 5px;
+  }
+
+  .subtext-modal {
+    display: flex;
+    float: right;
+    margin-top: -20vh;
+    margin-right: -30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+  }
+  .subtext-modalAdopt {
+    display: flex;
+    float: right;
+    margin-top: -65px;
+    margin-right: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
   }
 }
 </style>

@@ -136,7 +136,7 @@ a {
   font-size: x-large;
 }
 
-/* <!---------- Media Query ---------------> */
+/* <!---------- Media Query Desktop ---------------> */
 
 @media (min-width: 700px) {
   #logo {

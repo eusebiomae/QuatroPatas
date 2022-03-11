@@ -163,7 +163,7 @@ li {
   flex-wrap: wrap;
 }
 
-/* <!----------------------- Media Query -------------------> */
+/* <!----------------------- Media Query Desktop -------------------> */
 
 @media (min-width: 1200px) {
   #adopt {
