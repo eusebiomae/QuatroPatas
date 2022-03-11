@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="col-lg-6 order-lg-last" id="text-left">
+    <div class="text-left">
       <div class="">
         <h1 class="text-home">
           <b
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 order-first order-lg-last" id="img-home">
+    <div class="img-home">
       <img
         alt="Vue logo"
         class="logo-home"
@@ -57,7 +57,7 @@ export default {
   flex-direction: row-reverse;
 }
 
-#text-left {
+.text-left {
   margin-top: 75vh;
 }
 
@@ -117,16 +117,7 @@ export default {
   text-align: center;
 }
 
-#btn-adote {
-  width: auto;
-  margin-top: 25px;
-}
-#btn-regras {
-  width: auto;
-  margin-top: 25px;
-}
-
-#img-home {
+.img-home {
   margin-top: 20vh;
   margin-bottom: 25vh;
 }
@@ -150,7 +141,7 @@ export default {
     margin: auto;
   }
 
-  #text-left {
+  .text-left {
     margin-top: 10vh;
     margin-right: 2vh;
     margin-left: 15vh;
@@ -218,7 +209,7 @@ export default {
     text-align: center;
   }
 
-  #img-home {
+  .img-home {
     margin-top: 10vh;
     margin-bottom: 25vh;
   }

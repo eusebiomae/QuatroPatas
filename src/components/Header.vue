@@ -4,7 +4,6 @@
       <img
         alt="Vue logo"
         class="logo"
-        id="logo"
         src="@/assets/images/LogoQuatroPatas.svg"
     /></router-link>
 
@@ -12,21 +11,22 @@
       v-on:click="openMenu"
       src="@/assets/images/menu-nav.png"
       alt="Abrir Menu"
-      id="menu-button"
+      class="menu-button"
     />
 
-    <div v-on:click="closeMenu" id="menu-overlay" v-if="menuActive"></div>
+    <div v-on:click="closeMenu" class="menu-overlay" v-if="menuActive"></div>
 
-    <div id="menu-items" :class="{ active: menuActive }">
+    <div class="menu-items" :class="{ active: menuActive }">
       <img
         alt="Vue logo"
-        class="logo"
-        id="menu-logo"
+        class="menu-logo"
         src="@/assets/images/LogoQuatroPatas.svg"
       />
       <ul>
         <li>
-          <router-link to="/rules" id="rules-link">Nossas Regras</router-link>
+          <router-link to="/rules" class="rules-link"
+            >Nossas Regras</router-link
+          >
         </li>
       </ul>
     </div>
@@ -69,20 +69,20 @@ header {
   align-items: center;
 }
 
-#logo {
+.logo {
   width: 130px;
   margin: 1vh;
   margin-inline: 4vh;
 }
 
-#menu-button {
+.menu-button {
   width: 7vh;
   height: 7vh;
   margin: auto;
   margin-right: 4vh;
 }
 
-#menu-overlay {
+.menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,17 +92,17 @@ header {
   opacity: 0.6;
 }
 
-#rules-link {
+.rules-link {
   text-decoration: none;
 }
 
-#menu-logo {
+.menu-logo {
   width: 110px;
   margin-top: 3vh;
   margin-bottom: 2vh;
 }
 
-#menu-items {
+.menu-items {
   position: fixed;
   top: 0;
   right: 0;
@@ -115,7 +115,7 @@ header {
   align-items: center;
 }
 
-#menu-items.active {
+.menu-items.active {
   display: flex;
 }
 
@@ -139,23 +139,23 @@ a {
 /* <!---------- Media Query Desktop ---------------> */
 
 @media (min-width: 700px) {
-  #logo {
+  .logo {
     width: 130px;
     margin: 1vh;
     margin-inline: 19vh;
   }
 
-  #menu-button,
-  #menu-logo,
-  #menu-overlay {
+  .menu-button,
+  .menu-logo,
+  .menu-overlay {
     display: none;
   }
 
-  #rules-link {
+  .rules-link {
     text-decoration: none;
   }
 
-  #menu-items {
+  .menu-items {
     display: flex;
     position: static;
     height: 60px;

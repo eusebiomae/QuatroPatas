@@ -4,27 +4,22 @@
       ><img
         alt="Vue logo"
         class="logo-footer"
-        id="logo-footer"
         src="@/assets/images/LogoQuatroPatas.svg"
     /></router-link>
-    <div id="text-footer">
+    <div class="text-footer">
       <p><b>Quatro Patas Adoção de Animais</b></p>
       <p>
         <a
           href="http://maps.google.com/maps?q=158+R.+das+Oliveiras,+Iguatemi,+São+Paulo"
-          id="address-link"
+          class="address-link"
           target="blank"
           >Rua das Oliveiras, 158 | Nova Floresta - São Paulo, SP 13999-008
         </a>
       </p>
       <p>
-        <a href="tel:+021-9921-8282" class="" id="phone-link-q"
-          >(021) 9921-8282</a
-        >
+        <a href="tel:+021-9921-8282" class="phone-link-q">(021) 9921-8282</a>
         ou
-        <a href="tel:+019-9923-5050" class="" id="phone-link-q"
-          >(019) 9923-5050</a
-        >
+        <a href="tel:+019-9923-5050" class="phone-link-q">(019) 9923-5050</a>
       </p>
       <br />
     </div>
@@ -35,7 +30,7 @@
       <ul>
         <li>
           Violência contra animais é crime. Denuncie
-          <a href="tel:0800-600-6428" class="" id="phone-link">0800 600 6428</a>
+          <a href="tel:0800-600-6428" class="phone-link">0800 600 6428</a>
         </li>
       </ul>
     </div>
@@ -58,12 +53,12 @@ footer {
   left: 0;
 }
 
-#logo-footer {
+.logo-footer {
   width: 30vh;
   margin-inline: 12vh;
   margin-top: 7vh;
 }
-#text-footer {
+.text-footer {
   margin: 2vh;
   text-align: center;
   margin-top: 5vh;
@@ -97,26 +92,26 @@ ul li {
 ul li {
   color: #fff;
 }
-#phone-link {
+.phone-link {
   text-decoration: none;
   color: #fff;
 }
-#phone-link:hover {
+.phone-link:hover {
   color: #9b5cda;
 }
-#phone-link-q {
+.phone-link-q {
   text-decoration: none;
   color: #000;
 }
-#phone-link-q:hover {
+.phone-link-q:hover {
   color: #8e41dc;
 }
 
-#address-link {
+.address-link {
   text-decoration: none;
   color: #000;
 }
-#address-link:hover {
+.address-link:hover {
   color: #9b5cda;
 }
 
@@ -135,12 +130,12 @@ ul li {
     align-items: center;
   }
 
-  #logo-footer {
+  .logo-footer {
     width: 30vh;
     margin-bottom: 10vh;
     margin-inline: 23vh;
   }
-  #text-footer {
+  .text-footer {
     margin: 15vh;
     margin-left: 38vh;
     text-align: left;
@@ -165,18 +160,18 @@ ul li {
     margin-left: 20vh;
     margin-top: 0;
   }
-  #phone-link {
+  .phone-link {
     text-decoration: none;
     color: #fff;
   }
-  #phone-link:hover {
+  .phone-link:hover {
     color: #9b5cda;
   }
-  #phone-link-q {
+  .phone-link-q {
     text-decoration: none;
     color: #000;
   }
-  #phone-link-q:hover {
+  .phone-link-q:hover {
     color: #8e41dc;
   }
 }

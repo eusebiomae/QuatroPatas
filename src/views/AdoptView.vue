@@ -1,21 +1,20 @@
 <template>
   <div id="adopt">
-    <div class="col-lg-6 order-lg-last" id="text-left">
+    <div class="text-left">
       <div class="">
-        <h1 id="text-home">
+        <h1 class="text-home">
           <b>Adote Agora!</b>
         </h1>
       </div>
-      <div id="text-subhome">
+      <div class="text-subhome">
         <p>Temos vários peludinhos esperando para fazer um lar mais feliz!</p>
       </div>
     </div>
 
-    <div class="col-lg-6 order-first order-lg-last" id="img-home">
+    <div class="img-home">
       <img
         alt="Vue logo"
         class="logo-home"
-        id="logo-home"
         src="@/assets/images/AdoptDog2x.png"
       />
     </div>
@@ -99,39 +98,39 @@ export default defineComponent({
   flex-direction: row-reverse;
 }
 
-#text-left {
+.text-left {
   margin-top: 70vh;
   margin-left: -45vh;
   margin-bottom: 25vh;
 }
 
-#text-home {
+.text-home {
   font-family: "Amatic Sc";
   font-size: 7vh;
   text-align: center;
 }
 
-#text-subhome {
+.text-subhome {
   text-align: left;
   font-size: initial;
   font-family: "Nunito", sans-serif;
 }
 
-#btn-adote {
+.btn-adote {
   width: auto;
   margin-top: 25px;
 }
-#btn-regras {
+.btn-regras {
   width: auto;
   margin-top: 25px;
 }
 
-#img-home {
+.img-home {
   margin-top: 20vh;
   margin-bottom: 25vh;
 }
 
-#logo-home {
+.logo-home {
   max-width: 45vh;
 }
 
@@ -169,41 +168,41 @@ li {
     margin: auto;
   }
 
-  #text-left {
+  .text-left {
     margin-top: 30vh;
     margin-right: 2vh;
     margin-left: 15vh;
     margin-bottom: 25vh;
   }
 
-  #text-home {
+  .text-home {
     font-family: "Amatic Sc";
     font-size: 10vh;
     text-align: left;
   }
 
-  #text-subhome {
+  .text-subhome {
     text-align: left;
     font-size: initial;
     font-family: "Nunito", sans-serif;
   }
 
-  #btn-adote {
+  .btn-adote {
     width: 190px;
     margin-top: 25px;
   }
-  #btn-regras {
+  .btn-regras {
     width: 190px;
     margin-top: 25px;
     margin-left: 15px;
   }
 
-  #img-home {
+  .img-home {
     margin-top: 15vh;
     margin-bottom: 25vh;
   }
 
-  #logo-home {
+  .logo-home {
     max-width: 90vh;
     margin-left: 19vh;
   }

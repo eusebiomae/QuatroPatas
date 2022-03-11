@@ -1,6 +1,6 @@
 <template>
   <div class="rules">
-    <div class="col-lg-6 order-lg-last" id="text-left">
+    <div class="text-left">
       <div class="">
         <h1 class="text-home">
           <b>Nossas Regras</b>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 order-first order-lg-last" id="img-home">
+    <div class="img-home">
       <img
         alt="Vue logo"
         class="logo-home"
@@ -64,7 +64,7 @@ export default {
   flex-direction: row-reverse;
 }
 
-#text-left {
+.text-left {
   margin-top: 70vh;
   margin-left: -45vh;
   margin-bottom: 10vh;
@@ -107,17 +107,13 @@ export default {
   text-align: center;
   border: 2px solid #7818d9;
 }
-#btn-regras {
-  width: auto;
-  margin-top: 25px;
-}
 
-#img-home {
+.img-home {
   margin-top: 20vh;
   margin-bottom: 25vh;
 }
 
-#logo-home {
+.logo-home {
   max-width: 45vh;
 }
 
@@ -152,7 +148,7 @@ p {
     margin: auto;
   }
 
-  #text-left {
+  .text-left {
     margin-top: 25vh;
     margin-right: 2vh;
     margin-left: 15vh;
@@ -192,12 +188,12 @@ p {
     border: 2px solid #7818d9;
   }
 
-  #img-home {
+  .img-home {
     margin-top: 10vh;
     margin-bottom: 25vh;
   }
 
-  #logo-home {
+  .logo-home {
     max-width: 95vh;
     margin-left: 15vh;
   }
